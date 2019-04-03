@@ -1,0 +1,81 @@
+package org.ambrish.softwareag.SoftwareAg.enforcements;
+
+
+
+public class Enforcement
+	
+
+	
+	{
+	 
+	  private String enforcementObjectId;
+	  private String order;
+	  private String parentPolicyId;
+	  
+	  public String getEnforcementObjectId()
+	  {
+	    return this.enforcementObjectId;
+	  }
+	  
+	  public void setEnforcementObjectId(String enforcementObjectId)
+	  {
+	    this.enforcementObjectId = enforcementObjectId;
+	  }
+	  
+	  public String getOrder()
+	  {
+	    return this.order;
+	  }
+	  
+	  public void setOrder(String order)
+	  {
+	    this.order = order;
+	  }
+	  
+	  public String getParentPolicyId()
+	  {
+	    return this.parentPolicyId;
+	  }
+	  
+	  public void setParentPolicyId(String parentPolicyId)
+	  {
+	    this.parentPolicyId = parentPolicyId;
+	  }
+	  
+	  public int compareTo(Enforcement enforcement2)
+	  {
+	    String customOrder = enforcement2.getOrder();
+	    if ((this.order == null) && (customOrder == null)) {
+	      return 0;
+	    }
+	    if ((this.order == null) && (customOrder != null)) {
+	      return -1;
+	    }
+	    if ((this.order != null) && (customOrder == null)) {
+	      return 1;
+	    }
+	    int myorder = Integer.getInteger(this.order).intValue();
+	    int myOponentOrder = Integer.getInteger(customOrder).intValue();
+	    return myorder - myOponentOrder;
+	  }
+	  
+	  public boolean equals(Object anotherEnforcement)
+	  {
+	    if ((anotherEnforcement instanceof Enforcement)) {
+	      return ((Enforcement)anotherEnforcement).getEnforcementObjectId().equals(this.enforcementObjectId);
+	    }
+	    return false;
+	  }
+	  
+	// public int hashCode()
+	//  {
+	 //   return super.hashCode();
+	 // }
+	  public String toString()
+	  {
+		  return this.enforcementObjectId;
+	  }
+	 }
+
+
+

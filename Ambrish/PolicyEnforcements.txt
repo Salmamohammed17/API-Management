@@ -1,0 +1,55 @@
+package org.ambrish.softwareag.SoftwareAg.policyenforcements;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.ambrish.softwareag.SoftwareAg.enforcements.Enforcement;
+
+public class PolicyEnforcements {
+	
+	 
+	
+	  
+	  public ArrayList<Enforcement> enforcements= new ArrayList<>();
+	  private String stageKey;
+	  
+	  public PolicyEnforcements(String stageKey)
+	  {
+	    this.stageKey = stageKey;
+	  }
+	
+	  public PolicyEnforcements() {}
+	  
+	  public List<Enforcement> getEnforcements()
+	  {
+	    if (this.enforcements == null) {
+	      this.enforcements = new ArrayList();
+	    }
+	    return this.enforcements;
+	  }
+	  
+	  public void setEnforcements(ArrayList<Enforcement> enforcements)
+	  {
+	    this.enforcements = enforcements;
+	  }
+	  
+	  public String getStageKey()
+	  {
+	    return this.stageKey;
+	  }
+	  
+	  public void setStageKey(String stageKey)
+	  {
+	    this.stageKey = stageKey;
+	  }
+	  public String toString()
+	  {
+		  return this.stageKey;
+	  }
+	}
+
+	
+	
+
+

@@ -1,0 +1,45 @@
+package org.ambrish.softwareag.SoftwareAg.internalizedstring;
+
+
+
+
+public class InternationalizedString {
+
+	
+	  private String value;
+	  private String locale;
+	  
+	  public String getValue()
+	  {
+	    return this.value;
+	  }
+	  
+	  public void setValue(String value)
+	  {
+	    this.value = value;
+	  }
+	  
+	  public String getLocale()
+	  {
+	    return this.locale;
+	  }
+	  
+	  public void setLocale(String locale)
+	  {
+	    this.locale = locale;
+	  }
+
+	
+	  public String toString()
+	  {
+	    return this.value;
+	  }
+	  public String toString1()
+	  {
+		  return this.locale;
+	  }
+	
+	
+
+
+}

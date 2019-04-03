@@ -1,0 +1,79 @@
+package org.ambrish.softwareag.SoftwareAg.model;
+
+
+import java.util.ArrayList;
+
+import org.ambrish.softwareag.SoftwareAg.policyenforcements.PolicyEnforcements;
+import org.ambrish.softwareag.SoftwareAg.internalizedstring.InternationalizedString;
+
+public class Policy {
+	
+	private String id;
+	public ArrayList<InternationalizedString> names=new ArrayList<>();
+    public ArrayList<InternationalizedString> descriptions=new ArrayList<>();
+	private  String scope;
+	public ArrayList<PolicyEnforcements> policyEnforcements =new ArrayList<>(); 
+    private boolean isGlobal;
+	private String policyScope;
+	private boolean isActive;
+	public ArrayList<InternationalizedString> getNames() {
+		return names;
+	}
+	public void setNames(ArrayList<InternationalizedString> names) {
+		this.names = names;
+	}
+	public ArrayList<InternationalizedString> getDescriptions() {
+		return descriptions;
+	}
+	public void setDescriptions(ArrayList<InternationalizedString> descriptions) {
+		this.descriptions = descriptions;
+	}
+	public String getScope() {
+		return scope;
+	}
+	public void setScope(String scope) {
+		this.scope = scope;
+	}
+	public ArrayList<PolicyEnforcements> getPolicyEnforcements() {
+		return policyEnforcements;
+	}
+	public void setPolicyEnforcements(ArrayList<PolicyEnforcements> policyEnforcements) {
+		this.policyEnforcements = policyEnforcements;
+	}
+	public boolean isGlobal() {
+		return isGlobal;
+	}
+	public void setGlobal(boolean isGlobal) {
+		this.isGlobal = isGlobal;
+	}
+	public String getPolicyScope() {
+		return policyScope;
+	}
+	public void setPolicyScope(String policyScope) {
+		this.policyScope = policyScope;
+	}
+	public boolean isActive() {
+		return isActive;
+	}
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+	public boolean isSystemPolicy() {
+		return isSystemPolicy;
+	}
+	public void setSystemPolicy(boolean isSystemPolicy) {
+		this.isSystemPolicy = isSystemPolicy;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	private boolean isSystemPolicy;
+	public String getId() {
+		return id;
+	}
+	public String toString()
+	{
+		return this.id;
+	}
+		
+}

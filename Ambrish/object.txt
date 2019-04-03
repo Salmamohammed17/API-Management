@@ -1,0 +1,77 @@
+package org.ambrish.softwareag.SoftwareAg.object;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Base64;
+
+import org.ambrish.softwareag.SoftwareAg.enforcements.Enforcement;
+import org.ambrish.softwareag.SoftwareAg.internalizedstring.InternationalizedString;
+import org.ambrish.softwareag.SoftwareAg.model.Policy;
+import org.ambrish.softwareag.SoftwareAg.policyenforcements.PolicyEnforcements;
+
+public class Object {
+	
+
+	public static void main(String[] args) throws IOException {
+		Object.MyGETRequest();
+	//	Object.MyPUTRequest();
+		
+		Policy policy = new Policy();
+		policy.setId("6d1db9dd-9ec7-40ca-889b-ecd6e0f310f6");
+		
+   
+		
+		InternationalizedString internationalizedString = new InternationalizedString();
+		internationalizedString.setValue("Default Policy for API Employee1");
+		internationalizedString.setLocale("English");
+		policy.names.add(internationalizedString);
+		
+		InternationalizedString internationalizedString1 = new InternationalizedString();
+		internationalizedString1.setValue("" + "");
+	    internationalizedString1.setLocale("English");
+	    policy.descriptions.add(internationalizedString1);
+		
+		PolicyEnforcements policyenforcement = new PolicyEnforcements();
+		Enforcement enforce = new Enforcement();
+		enforce.setEnforcementObjectId("d244e8bb-1aed-44f8-86af-39094c08e147");
+		enforce.setOrder(null);
+	    policyenforcement.setStageKey("routing");
+		policy.policyEnforcements.add(policyenforcement);
+		policy.enforcements.add(enforce);
+
+		PolicyEnforcements policyenforcement1 = new PolicyEnforcements();
+		Enforcement enforce1 = new Enforcement();
+		enforce1.setEnforcementObjectId("2534d8a6-3996-43f4-a170-ba9d2568049f");
+		enforce1.setOrder(null);
+		policyenforcement1.setStageKey("IAM");
+		policy.policyEnforcements.add(policyenforcement1);
+		policy.enforcements.add(policyenforcement);
+
+		PolicyEnforcements policyenforcement2 = new PolicyEnforcements();
+		Enforcement enforce2 = new Enforcement();
+		enforce2.setEnforcementObjectId("8c3b6255-6896-4d78-81cc-8f7571edc8cf");
+		enforce2.setOrder(null);
+	    policyenforcement2.setStageKey("Transport");
+		policy.policyEnforcements.add(policyenforcement2);
+		policy.enforcements.add(enforce2);
+	
+		
+		policy.setPolicyScope("SERVICE");
+
+		policy.setActive(false);
+	
+		policy.setGlobal(false);
+	
+		policy.setSystemPolicy(false);
+		
+		System.out.println(policy);
+		
+	}
+
+		
+	
+	
