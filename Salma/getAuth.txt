@@ -1,0 +1,52 @@
+package javaPracticePrograms;
+import java.util.*;
+import java.net.*;
+import java.util.Base64.Encoder;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.core.util.Base64;
+
+
+public class JerseyClientGet {
+
+	public static void main(String[] args) {
+		try {
+
+			Client client = Client.create();
+
+			WebResource webResource = client.resource("http://localhost:5555/rest/apigateway/apis");
+
+			String user = "Administrator";
+			String pass = "manage";
+			String authStr = user + ":" + pass;
+			//byte[] encodedBytes = Base64.encode(authStr.getBytes());
+	//String authEncoded = Base64.getEncoder().encodeToString(authStr.getBytes());
+	        //System.out.println("Base64 encoded auth string: " + encodedBytes);
+			ClientResponse response = webResource.accept("application/json")
+					.header("Authorization", "Basic " + authEncoded).get(ClientResponse.class);
+			webResource.setProperty("Authorization", "Basic " + authEncoded);
+//			String user = "Administrator";
+//            String pass = "manage";
+//            String authStr = user + ":" + pass;
+//            String authEncoded = Base64.getEncoder().encodeToString(authStr.getBytes());
+//webResource.setProperty("Authorization", "Basic " + authEncoded);
+
+			if (response.getStatus() != 200) {
+				throw new RuntimeException("Failed : HTTP error code : " + response.getStatus());
+			}
+
+			String output = response.getEntity(String.class);
+
+			System.out.println("Output from Server .... \n");
+			System.out.println(output);
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		}
+
+	}
+
+}
