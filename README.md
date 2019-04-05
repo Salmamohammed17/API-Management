@@ -36,7 +36,7 @@ To do that, complete the following procedure from within Postman:
 
 - That is API Creation and Activation.In the API Creation we can create an API through three ways:
  
-  1. Using File
+     1 Using File
 
      2.Using URL
     
@@ -49,8 +49,8 @@ In this Management we Create an Application and Associate that Application with 
 
 -  Third file in **API Gateway Management is **Policy Management**.
 In the Policy Management We created the Policy Action for the Enforcement then Associate that Action with API.
+<img src="C:\Users\VMAH\Documents\Doc5\word\media\image5.png" />
 
-![image5](../Documents/Doc5/word/media/image5.png)
 
 
 -  We created the Policy Action for Identify & Authorize Application(IAM) enforcement and Log Invocation enforcement in **Creating a policyActions for enforcement**  file  and associate that Action with API in **Associate Policy Actions with API** file.
