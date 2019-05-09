@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "da60687b-5533-439b-b716-0ea4661b993c",
+		"name": "AppMessenger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "http://localhost:8089/AppMessenger/webapi/messages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-Gateway-APIKey",
+								"value": "eec6df75-b340-4023-b78e-f6daeab01b55",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "      {\n       \"message\": \"wassup\",\n        \"sender\": \"reshma\"\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8089/AppMessenger/webapi/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"AppMessenger",
+								"webapi",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8089/AppMessenger/webapi/messages/2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-Gateway-APIKey",
+								"value": "eec6df75-b340-4023-b78e-f6daeab01b55",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"message\": \"hellooo\",\n    \"sender\": \"heebu\"\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8089/AppMessenger/webapi/messages/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"AppMessenger",
+								"webapi",
+								"messages",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8089/AppMessenger/webapi/messages/3",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-Gateway-APIKey",
+						"value": "eec6df75-b340-4023-b78e-f6daeab01b55",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "      {\n       \"message\": \"wassup\",\n        \"sender\": \"reshma\"\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:8089/AppMessenger/webapi/messages/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"AppMessenger",
+						"webapi",
+						"messages",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8089/AppMessenger/webapi/messages",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-Gateway-APIKey",
+						"value": "eec6df75-b340-4023-b78e-f6daeab01b55",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "      {\n       \"message\": \"wassup\",\n        \"sender\": \"reshma\"\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:8089/AppMessenger/webapi/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"AppMessenger",
+						"webapi",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8089/AppMessenger/webapi/messages/2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-Gateway-APIKey",
+						"value": "eec6df75-b340-4023-b78e-f6daeab01b55",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"message\": \"hellooo\",\n    \"sender\": \"heebu\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8089/AppMessenger/webapi/messages/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"AppMessenger",
+						"webapi",
+						"messages",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
